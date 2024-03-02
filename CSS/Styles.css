@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root{
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White:hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: var(--Light-grayish-blue);
+}
+
+.app__container{
+  padding: 0 1rem;
+  margin-top: 4.3rem;
+  padding-bottom: 2rem;
+}
+.app__testimonial-card{
+  display: flex;
+  flex-direction: column;
+  background: var(--Moderate-violet);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
+  border-radius: 1rem;
+}
+.app__testimonial-card-person{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+.app__testimonial-card-person img{
+  width: 3rem;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid  var(--Light-gray);
+}
+.app__testimonial-card-person-id{
+  margin-left: 1rem;
+}
+.name{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Light-grayish-blue);
+  line-height: 20px;
+}
+.verification{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Light-grayish-blue);
+  line-height: 18px;
+  opacity: 0.5;
+}
+.app__testimonial-card-mini-head{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Light-grayish-blue);
+  line-height: 22px;
+  margin-bottom: 1rem;
+}
+.app__testimonial-card-desc{
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--Light-grayish-blue);
+  line-height: 16px;
+  opacity: 0.7;
+}
+.app__testimonial-card:nth-child(1) .app__testimonial-card-desc{
+  color: var(--Light-grayish-blue);
+  opacity: .7;
+}
+.app__testimonial-card:nth-child(2){
+  background: var(--Very-dark-grayish-blue);
+}
+.app__testimonial-card:nth-child(2) .app__testimonial-card-person img{
+  border-color: var(--Very-dark-grayish-blue);
+}
+.app__testimonial-card:nth-child(3){
+  background: var(--White);
+}
+.app__testimonial-card:nth-child(3) .name,
+.app__testimonial-card:nth-child(3) .verification,
+.app__testimonial-card:nth-child(5) .name,
+.app__testimonial-card:nth-child(5) .verification{
+  color: var(--Very-dark-grayish-blue);
+}
+.app__testimonial-card:nth-child(3) .app__testimonial-card-mini-head,
+.app__testimonial-card:nth-child(3) .app__testimonial-card-desc{
+  color: var(--Very-dark-blackish-blue);
+}
+
+.app__testimonial-card:nth-child(3) .app__testimonial-card-person img,
+.app__testimonial-card:nth-child(5) .app__testimonial-card-person img{
+  border-color: var(--White);
+}
+.app__testimonial-card:nth-child(4){
+  background: var(--Very-dark-blackish-blue);
+}
+.app__testimonial-card:nth-child(4) .app__testimonial-card-person img{
+  border-color: var(--Moderate-violet);
+}
+.app__testimonial-card:nth-child(5){
+  background: var(--White);
+}
+
+.app__testimonial-card:nth-child(5) .app__testimonial-card-mini-head,
+.app__testimonial-card:nth-child(5) .app__testimonial-card-desc{
+  color: var(--Very-dark-grayish-blue);
+}
+
+@media screen and (min-width:800px) {
+  body{
+    padding: 3rem;
+  }
+  .app__container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 290px 270px 290px 300px;
+    gap: 2rem;
+    place-content: center;
+    grid-template-areas:
+      "daniel daniel  jonathan kira"
+      "jeanette patrick patrick kira"
+    ;
+    margin: 0;
+    padding: 0;
+  }
+  .daniel{
+    grid-area: daniel;
+  }
+  .jeanette{
+    grid-area: jeanette;
+  }
+  .jonathan{
+    grid-area: jonathan;
+  }
+  .patrick{
+    grid-area: patrick;
+  }
+  .kira{
+    grid-area: kira;
+  }
+  .app__testimonial-card{
+    margin: 0;
+  }
+}
